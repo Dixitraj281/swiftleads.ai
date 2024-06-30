@@ -1,0 +1,59 @@
+{
+  "footer": [
+    {
+      "links": [
+        {
+          "title": "Qucik Links",
+          "innerItem": [
+            {
+              "link": "#",
+              "text": "Pages"
+            },
+            {
+              "link": "/blog",
+              "text": "Blog"
+            },
+            {
+              "link": "/contact",
+              "text": "Contact"
+            },
+            {
+              "link": "/utilize",
+              "text": "How to use"
+            },
+            {
+              "link": "/roadmap",
+              "text": "Roadmap"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "title": "Services",
+          "innerItem": [
+            {
+              "link": "/Email-generator",
+              "text": "Email Generator"
+            },
+            {
+              "link": "/",
+              "text": "Text Messages"
+            },
+            {
+              "link": "/Automated-calls",
+              "text": "Automated Calls"
+            }
+          ]
+        }
+      ],
+      "contact": [
+        {
+          "location": "8819 Ohio St. South Gate, North America, USA",
+          "mail": "swiftleads@ai.com",
+          "number": "1 386-688-3295"
+        }
+      ]
+    }
+  ]
+}

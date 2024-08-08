@@ -9,7 +9,7 @@ import LeftDashboardSidebar from "@/components/Header/LeftDashboardSidebar";
 import HeaderDashboard from "@/components/Header/HeaderDashboard";
 import RightDashboardSidebar from "@/components/Header/RightDashboardSidebar";
 import Modal from "@/components/Common/Modal";
-import TextGenerator from "@/components/TextGenerator/TextGenerator";
+import TextGenerator from "@/components/EmailConnector/TextGenerator";
 import StaticbarDashboard from "@/components/Common/StaticBarDashboard";
 
 const TextGeneratorPage = () => {

@@ -29,7 +29,7 @@ const Nav = () => {
 
   return (
     <>
-      <ul className="mainmenu">
+      {/* <ul className="mainmenu">
         {MenuData &&
           MenuData.nav.map((data, index) => (
             <li
@@ -126,7 +126,7 @@ const Nav = () => {
               )}
             </li>
           ))}
-      </ul>
+      </ul> */}
     </>
   );
 };

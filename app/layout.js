@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Sora } from "@next/font/google";
+import { Sora } from "next/font/google";
 
 import "bootstrap/scss/bootstrap.scss";
 

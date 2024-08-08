@@ -134,7 +134,7 @@ const LeftSidebar = () => {
             </div>
           </div>
 
-          <div className="subscription-box">
+          {/* <div className="subscription-box">
             <div className="inner">
               <Link href="/profile-details" className="autor-info">
                 <div className="author-img active">
@@ -158,14 +158,14 @@ const LeftSidebar = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
           <p className="subscription-copyright copyright-text text-center b3  small-text">
             © 2024
             <Link
               className="ps-2"
               href="https://themeforest.net/user/rainbow-themes/portfolio"
             >
-              Rainbow Themes
+              Swiftlead Ai
             </Link>
             .
           </p>

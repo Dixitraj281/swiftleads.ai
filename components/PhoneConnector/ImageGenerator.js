@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import sal from "sal.js";
 
 import imgPhoto from "../../public/images/icons/photo-icon.png";
-import styles from "./SMSConnector.module.css"; // Import the updated CSS module
+import styles from "./ImageGenerator.module.css"; // Import the updated CSS module
 
 import TopBar from "../Common/TopBar";
 
-const CodeGenerator = () => {
+const ImageGenerator = () => {
   const [phone, setPhone] = useState("");
 
   useEffect(() => {
@@ -29,20 +29,20 @@ const CodeGenerator = () => {
       <TopBar
         padding={true}
         barImg={imgPhoto}
-        title="Sms Connector"
+        title="Phone Connector"
         wdt={24}
         htd={24}
       />
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h2 className={styles.title}>Connect your Sms</h2>
+          <h2 className={styles.title}>Connect your phone</h2>
         </div>
         <div className={styles.contentContainer}>
           <input
             type="tel"
             value={phone}
             onChange={handlePhoneChange}
-            placeholder="Enter your number..."
+            placeholder="Enter your phone number..."
             className={styles.phoneInput}
           />
           <button
@@ -56,4 +56,5 @@ const CodeGenerator = () => {
     </>
   );
 };
-export default CodeGenerator;
+
+export default ImageGenerator;

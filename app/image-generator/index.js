@@ -10,7 +10,7 @@ import HeaderDashboard from "@/components/Header/HeaderDashboard";
 import RightDashboardSidebar from "@/components/Header/RightDashboardSidebar";
 import Modal from "@/components/Common/Modal";
 import StaticbarDashboard from "@/components/Common/StaticBarDashboard";
-import ImageGenerator from "@/components/ImageGenerator/ImageGenerator";
+import ImageGenerator from "@/components/PhoneConnector/ImageGenerator";
 
 const ImageGeneratorPage = () => {
   return (

@@ -7,22 +7,22 @@ import SingleRightPanel from "./HeaderProps/SingleRightPanel";
 import { useAppContext } from "@/context/Context";
 
 const RightDashboardSidebar = () => {
-  const { shouldCollapseRightbar } = useAppContext();
-  const [sectionStates, setSectionStates] = useState({
-    previous: true,
-    yesterday: true,
-    older: true,
-  });
+  // const { shouldCollapseRightbar } = useAppContext();
+  // const [sectionStates, setSectionStates] = useState({
+  //   previous: true,
+  //   yesterday: true,
+  //   older: true,
+  // });
 
-  const toggleSection = (section) => {
-    setSectionStates((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
-    }));
-  };
+  // const toggleSection = (section) => {
+  //   setSectionStates((prevState) => ({
+  //     ...prevState,
+  //     [section]: !prevState[section],
+  //   }));
+  // };
   return (
     <>
-      <div
+      {/* <div
         className={`rbt-right-side-panel popup-dashboardright-section ${
           shouldCollapseRightbar ? "collapsed" : ""
         }`}
@@ -137,7 +137,7 @@ const RightDashboardSidebar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

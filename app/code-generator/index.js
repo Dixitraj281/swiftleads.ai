@@ -20,7 +20,6 @@ const CodeGeneratorPage = () => {
           <Context>
             <LeftDashboardSidebar />
             <HeaderDashboard display="" />
-            <RightDashboardSidebar />
             <Modal />
             <PopupMobileMenu />
 

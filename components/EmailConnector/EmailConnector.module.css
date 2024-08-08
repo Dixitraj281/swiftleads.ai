@@ -1,0 +1,74 @@
+.emailConnector {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #1f1f2e, #2a2b48);
+  text-align: center;
+  color: white;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.emailInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #3a3b5a;
+  color: white;
+  outline: none;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.emailInput:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: #4a4b6b;
+}
+
+.connectBtn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff8c00, #e60073);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connectBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -8,7 +8,7 @@ const StaticbarDashboard = () => {
         {/* <Form /> */}
 
         <p className="b3 small-text">
-          Swiftlead Ai is an trained modal.
+          Swiftlead Ai is a trained model.
         </p>
       </div>
     </>

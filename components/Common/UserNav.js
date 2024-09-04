@@ -16,7 +16,7 @@ const UserNav = ({ title }) => {
           <h3 className="title">{title}</h3>
 
           <ul className="user-nav">
-            {HeaderData &&
+            {HeaderData && HeaderData.navDashboardItem &&
               HeaderData.navDashboardItem.slice(0, 7).map((data, index) => (
                 <li key={index}>
                   <Link

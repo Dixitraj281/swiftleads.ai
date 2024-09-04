@@ -10,6 +10,7 @@ import TopBar from "../Common/TopBar";
 
 const CodeGenerator = () => {
   const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     sal();
@@ -19,9 +20,23 @@ const CodeGenerator = () => {
     setPhone(e.target.value);
   };
 
-  const handleConnect = () => {
+  const handleConnect = async () => {
     // Handle the connect action here, e.g., sending the phone number to the server
-    console.log("Phone number entered:", phone);
+    const token = document.cookie.split('; ').find(row => row.startsWith('Authorization='))?.split('=')[1];
+    const response = await fetch("http://localhost:5002/user/addPhoneNumber", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `${token}`
+      },
+      body: JSON.stringify({"phone_number": phone}),
+    });
+
+    if (response.ok) {
+      setMessage("SMS connected successfully!");
+    } else {
+      setMessage("Failed to connect SMS. Please try again.");
+    }
   };
 
   return (
@@ -52,6 +67,7 @@ const CodeGenerator = () => {
             <span className="text">Connect</span>
           </button>
         </div>
+        {message && <p className={styles.message}>{message}</p>}
       </div>
     </>
   );

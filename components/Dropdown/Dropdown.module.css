@@ -1,0 +1,28 @@
+.options {
+    width: 100%;
+    max-width: 400px;
+    max-height: 45px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #3a3b5a;
+    color: white;
+    outline: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.options:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: #4a4b6b;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.placeholder {
+    margin-right: 8px;
+}

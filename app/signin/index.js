@@ -1,13 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
 import logo from "../../public/images/logo/logo.png";
 import userImg from "../../public/images/team/team-02sm.jpg";
 import brandImg from "../../public/images/brand/brand-t.png";
 import google from "../../public/images/sign-up/google.png";
 import facebook from "../../public/images/sign-up/facebook.png";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 const SigninPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter()
+  const signIn = async (e) => {
+    e.preventDefault()
+    const payload = {
+      email,
+      password,
+    };
+
+    try {
+      // Make an API request
+      const response = await fetch("http://localhost:5002/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      // Handle the response
+      if (response.ok) {
+        const data = await response.json();
+        const token = data?.data?.token
+        document.cookie = `Authorization=Bearer ${token};`;
+        router.push('/home')
+      } else {
+        const error = await response.json();
+        alert(`Sign in failed: ${error.message}`);
+      }
+    } catch (error) {
+      console.error("Error during sign in:", error);
+    }
+  }
+
   return (
     <>
       <main className="page-wrapper">
@@ -63,20 +102,24 @@ const SigninPage = () => {
                           <input
                             type="email"
                             placeholder="Enter email address"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
                         <div className="input-section password-section">
                           <div className="icon">
                             <i className="fa-sharp fa-regular fa-lock"></i>
                           </div>
-                          <input type="password" placeholder="Password" />
+                          <input type="password" placeholder="Password" required value={password}
+                            onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div className="forget-text">
                           <a className="btn-read-more" href="#">
                             <span>Forgot password</span>
                           </a>
                         </div>
-                        <button type="submit" className="btn-default">
+                        <button type="submit" className="btn-default" onClick={signIn}>
                           Sign In
                         </button>
                       </form>
